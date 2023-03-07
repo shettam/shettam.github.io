@@ -1,3 +1,20 @@
 body{
     background-color: rgb(146, 204, 79);
+    font-size: 18px;
+}
+div{
+   margin-top: 10vh; 
+}
+button{
+    border-radius: 4px;
+    height: 60px;
+    width: 120px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 45vw;
+    box-sizing: border-box;  
+}
+h1{
+    text-align: center;
 }
