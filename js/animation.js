@@ -11,9 +11,10 @@ img.src="./image/horse_tr.png"
 img.width="150"
 img.style.backgroundColor="transparent"
 element.appendChild(img)
+var btn = document.getElementById("startRace")
 
 function step(timestamp) {
-if (!start || progress > window.screen.width-200) start = timestamp;
+if (!start || progress > window.innerWidth-200) start = timestamp;
 progress = ((timestamp - start) / 10 + 50);
 element.style.left = progress + 'px';
 stopId = window.requestAnimationFrame(step);
@@ -22,9 +23,11 @@ stopId = window.requestAnimationFrame(step);
 function toggleAnimation() {
 if (!toggle) {
     toggle = true;
+    btn.innerHTML = "Stop Race"
     window.requestAnimationFrame(step);
 } else {
     toggle = false;
+    btn.innerHTML = "Start Race"
     cancelAnimationFrame(stopId);
 }
 }
